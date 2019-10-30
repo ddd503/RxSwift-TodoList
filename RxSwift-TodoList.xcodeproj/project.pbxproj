@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		455A38DA2369CBB100AE7B06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455A38D92369CBB100AE7B06 /* AppDelegate.swift */; };
 		455A38DC2369CBB100AE7B06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455A38DB2369CBB100AE7B06 /* SceneDelegate.swift */; };
-		455A38DE2369CBB100AE7B06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455A38DD2369CBB100AE7B06 /* ViewController.swift */; };
 		455A38E12369CBB100AE7B06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455A38DF2369CBB100AE7B06 /* Main.storyboard */; };
 		455A38E32369CBB400AE7B06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 455A38E22369CBB400AE7B06 /* Assets.xcassets */; };
 		455A38E62369CBB400AE7B06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455A38E42369CBB400AE7B06 /* LaunchScreen.storyboard */; };
+		455A38EF2369D16400AE7B06 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455A38EE2369D16400AE7B06 /* TaskListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		455A38D62369CBB100AE7B06 /* RxSwift-TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RxSwift-TodoList.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		455A38D92369CBB100AE7B06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		455A38DB2369CBB100AE7B06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		455A38DD2369CBB100AE7B06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		455A38E02369CBB100AE7B06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		455A38E22369CBB400AE7B06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		455A38E52369CBB400AE7B06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		455A38E72369CBB400AE7B06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		455A38EE2369D16400AE7B06 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,23 @@
 		455A38D82369CBB100AE7B06 /* RxSwift-TodoList */ = {
 			isa = PBXGroup;
 			children = (
+				455A38ED2369D14900AE7B06 /* Controller */,
 				455A38D92369CBB100AE7B06 /* AppDelegate.swift */,
 				455A38DB2369CBB100AE7B06 /* SceneDelegate.swift */,
-				455A38DD2369CBB100AE7B06 /* ViewController.swift */,
-				455A38DF2369CBB100AE7B06 /* Main.storyboard */,
 				455A38E22369CBB400AE7B06 /* Assets.xcassets */,
 				455A38E42369CBB400AE7B06 /* LaunchScreen.storyboard */,
 				455A38E72369CBB400AE7B06 /* Info.plist */,
 			);
 			path = "RxSwift-TodoList";
+			sourceTree = "<group>";
+		};
+		455A38ED2369D14900AE7B06 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				455A38DF2369CBB100AE7B06 /* Main.storyboard */,
+				455A38EE2369D16400AE7B06 /* TaskListViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				455A38DE2369CBB100AE7B06 /* ViewController.swift in Sources */,
+				455A38EF2369D16400AE7B06 /* TaskListViewController.swift in Sources */,
 				455A38DA2369CBB100AE7B06 /* AppDelegate.swift in Sources */,
 				455A38DC2369CBB100AE7B06 /* SceneDelegate.swift in Sources */,
 			);
