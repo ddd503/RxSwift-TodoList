@@ -15,9 +15,11 @@
 		455A38EF2369D16400AE7B06 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455A38EE2369D16400AE7B06 /* TaskListViewController.swift */; };
 		455A38F1236B120000AE7B06 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455A38F0236B120000AE7B06 /* AddTaskViewController.swift */; };
 		455A38F4236B36BD00AE7B06 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455A38F3236B36BD00AE7B06 /* Task.swift */; };
+		4C8722D7A8544FB3EBAFC06A /* Pods_RxSwift_TodoList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0831410DB4315309CCC2297 /* Pods_RxSwift_TodoList.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C84DAC6078804B3DC6BA6FF /* Pods-RxSwift-TodoList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift-TodoList.release.xcconfig"; path = "Target Support Files/Pods-RxSwift-TodoList/Pods-RxSwift-TodoList.release.xcconfig"; sourceTree = "<group>"; };
 		455A38D62369CBB100AE7B06 /* RxSwift-TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RxSwift-TodoList.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		455A38D92369CBB100AE7B06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		455A38DB2369CBB100AE7B06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +30,8 @@
 		455A38EE2369D16400AE7B06 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 		455A38F0236B120000AE7B06 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		455A38F3236B36BD00AE7B06 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		6D441D0B815DA33E0EDB6502 /* Pods-RxSwift-TodoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift-TodoList.debug.xcconfig"; path = "Target Support Files/Pods-RxSwift-TodoList/Pods-RxSwift-TodoList.debug.xcconfig"; sourceTree = "<group>"; };
+		B0831410DB4315309CCC2297 /* Pods_RxSwift_TodoList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwift_TodoList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C8722D7A8544FB3EBAFC06A /* Pods_RxSwift_TodoList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,8 @@
 			children = (
 				455A38D82369CBB100AE7B06 /* RxSwift-TodoList */,
 				455A38D72369CBB100AE7B06 /* Products */,
+				ADB61F8EC27F7672A98222F4 /* Pods */,
+				89D5D1E8B5D61CD89BD877C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +96,24 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		89D5D1E8B5D61CD89BD877C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0831410DB4315309CCC2297 /* Pods_RxSwift_TodoList.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ADB61F8EC27F7672A98222F4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D441D0B815DA33E0EDB6502 /* Pods-RxSwift-TodoList.debug.xcconfig */,
+				0C84DAC6078804B3DC6BA6FF /* Pods-RxSwift-TodoList.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -96,9 +121,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 455A38EA2369CBB400AE7B06 /* Build configuration list for PBXNativeTarget "RxSwift-TodoList" */;
 			buildPhases = (
+				124DC5C438B0533E784E2876 /* [CP] Check Pods Manifest.lock */,
 				455A38D22369CBB100AE7B06 /* Sources */,
 				455A38D32369CBB100AE7B06 /* Frameworks */,
 				455A38D42369CBB100AE7B06 /* Resources */,
+				01230D0EC2E74C70DCDA66E7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +181,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01230D0EC2E74C70DCDA66E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxSwift-TodoList/Pods-RxSwift-TodoList-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxSwift-TodoList/Pods-RxSwift-TodoList-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxSwift-TodoList/Pods-RxSwift-TodoList-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		124DC5C438B0533E784E2876 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxSwift-TodoList-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		455A38D22369CBB100AE7B06 /* Sources */ = {
@@ -306,6 +375,7 @@
 		};
 		455A38EB2369CBB400AE7B06 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D441D0B815DA33E0EDB6502 /* Pods-RxSwift-TodoList.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -324,6 +394,7 @@
 		};
 		455A38EC2369CBB400AE7B06 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C84DAC6078804B3DC6BA6FF /* Pods-RxSwift-TodoList.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
