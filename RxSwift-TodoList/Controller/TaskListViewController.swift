@@ -29,21 +29,40 @@ class TaskListViewController: UIViewController {
             fatalError()
         }
 
+        // 遷移先のsaveアクションを購読して下記を実行
         addTaskVC.taskSubjectObservable.subscribe(onNext: { [weak self] task in
             guard let self = self else { return }
             self.tasks.accept(self.tasks.value + [task])
-            if let selectedPriority = Priority(rawValue: self.segmentedControl.selectedSegmentIndex - 1) {
-                self.filterTasks.accept(self.filterTask(by: selectedPriority, tasks: self.tasks.value))
-            } else {
-                // allのケース
-                self.filterTasks.accept(self.tasks.value)
-            }
-            self.tableView.reloadData()
+            let priority = Priority(rawValue: self.segmentedControl.selectedSegmentIndex - 1)
+            self.filterTasks(by: priority, tasks: self.tasks.value)
+            self.updateTableView()
         }).disposed(by: disposeBag)
     }
 
-    func filterTask(by selectedPriority: Priority, tasks: [Task]) -> [Task] {
-        return tasks.filter { $0.priority == selectedPriority }
+    @IBAction func priorityValueChanged(_ sender: UISegmentedControl) {
+        // allならPriorityはnilになる
+        let priority = Priority(rawValue: sender.selectedSegmentIndex - 1)
+        filterTasks(by: priority, tasks: tasks.value)
+        updateTableView()
+    }
+
+    /// 渡したプライオリティーでタスクをフィルタリングする
+    /// - Parameter selectedPriority: Priority, nilならAll
+    /// - Parameter tasks: 保持しているタスク配列
+    func filterTasks(by selectedPriority: Priority?, tasks: [Task]) {
+        if let selectedPriority = selectedPriority {
+            let filterTasks = tasks.filter { $0.priority == selectedPriority }
+            self.filterTasks.accept(filterTasks)
+        } else {
+            // allのケース
+            self.filterTasks.accept(self.tasks.value)
+        }
+    }
+
+    func updateTableView() {
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
+        }
     }
 }
 
@@ -53,12 +72,12 @@ extension TaskListViewController: UITableViewDataSource {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(filterTasks.value.count)
         return filterTasks.value.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel?.text = filterTasks.value[indexPath.row].title
         return cell
     }
 }
