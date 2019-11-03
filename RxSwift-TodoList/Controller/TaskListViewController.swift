@@ -52,10 +52,10 @@ class TaskListViewController: UIViewController {
     func filterTasks(by selectedPriority: Priority?, tasks: [Task]) {
         if let selectedPriority = selectedPriority {
             let filterTasks = tasks.filter { $0.priority == selectedPriority }
-            self.filterTasks.accept(filterTasks)
+            self.filterTasks.accept(filterTasks.reversed())
         } else {
             // allのケース
-            self.filterTasks.accept(self.tasks.value)
+            self.filterTasks.accept(self.tasks.value.reversed())
         }
     }
 
@@ -63,6 +63,12 @@ class TaskListViewController: UIViewController {
         DispatchQueue.main.async { [weak self] in
             self?.tableView.reloadData()
         }
+    }
+
+    func reverse(tasks: [Task]) -> [Task] {
+        var tasks = tasks
+        tasks.reverse()
+        return tasks
     }
 }
 
@@ -78,6 +84,7 @@ extension TaskListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = filterTasks.value[indexPath.row].title
+        cell.detailTextLabel?.text = filterTasks.value[indexPath.row].priority.title
         return cell
     }
 }

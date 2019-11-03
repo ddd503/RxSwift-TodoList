@@ -28,15 +28,30 @@
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tC7-XK-LrF">
-                                <rect key="frame" x="0.0" y="154" width="414" height="742"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="0.0" y="169" width="414" height="727"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="OC9-su-7p8">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="UXp-Mp-mtO" detailTextLabel="Qtl-hE-LIu" style="IBUITableViewCellStyleValue1" id="OC9-su-7p8">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OC9-su-7p8" id="5cG-w6-zV2">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UXp-Mp-mtO">
+                                                    <rect key="frame" x="20" y="12" width="35.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qtl-hE-LIu">
+                                                    <rect key="frame" x="344" y="15" width="50" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -48,7 +63,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="tC7-XK-LrF" firstAttribute="top" secondItem="iRZ-22-ttk" secondAttribute="bottom" constant="5" id="VhZ-u5-Dh3"/>
+                            <constraint firstItem="tC7-XK-LrF" firstAttribute="top" secondItem="iRZ-22-ttk" secondAttribute="bottom" constant="20" id="VhZ-u5-Dh3"/>
                             <constraint firstAttribute="bottom" secondItem="tC7-XK-LrF" secondAttribute="bottom" id="WwP-F7-wHA"/>
                             <constraint firstItem="tC7-XK-LrF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dRg-2d-Tgs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tC7-XK-LrF" secondAttribute="trailing" id="hJe-fo-hkE"/>
